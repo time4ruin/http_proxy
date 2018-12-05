@@ -195,7 +195,7 @@ void *threadfunc(void *arg)
         if (n < 0)
             error("ERROR writing to socket");
         printf("----------Proxy Reply Successfully Sent to Socket#%d----------\n", sockfd);
-        
+        close(sockfd_p);
     }
 
     pthread_mutex_lock(&mutex_lock);
